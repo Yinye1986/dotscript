@@ -13,7 +13,7 @@ gsettings set org.gnome.system.proxy.socks port 7891
 ## 电源模式
 # gsettings set org.gnome.shell last-selected-power-profile "'power-saver'"
 ## 常规 (电源按钮行为)
-gsettings set org.gnome.settings-daemon.plugins.power power-button-action \'nothing\'
+# gsettings set org.gnome.settings-daemon.plugins.power power-button-action \'nothing\'
 ## 节电
 ### 自动熄屏
 # gsettings set org.gnome.desktop.session idle-delay 'uint32 0'

@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-
 # 换源
 sudo tee -a /etc/pacman.conf <<'EOF'
 [mypkgs]
@@ -20,6 +19,8 @@ git config --global user.name "Yinye1986"
 git config --global user.email "Yinye1986@gmail.com"
 git config --global core.editor "hx"
 git config --global init.defaultbranch "main"
+git config --global https.proxy https://127.0.0.1:7890
+git config --global http.proxy http://127.0.0.1:7890
 
 # fish
 sudo pacman -S --needed --noconfirm fish
@@ -38,6 +39,6 @@ function fm
 end
 EOF
 
-# helix
-# sudo pacman -S --needed --noconfirm helix
-# sudo ln -sf /usr/bin/helix /usr/bin/hx
+helix
+sudo pacman -S --needed --noconfirm helix
+sudo ln -sf /usr/bin/helix /usr/bin/hx
