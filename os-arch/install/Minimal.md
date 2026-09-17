@@ -14,7 +14,7 @@ mount --mkdir ${disk}p1 /mnt/boot
 vim /etc/pacman.conf
 
 # 安装
-pacstrap -K /mnt base linux-zen linux-firmware amd-ucode mesa
+pacstrap -K /mnt base linux-zen linux-firmware
 
 # fstab
 genfstab -U /mnt > /mnt/etc/fstab
@@ -51,7 +51,7 @@ locale-gen
 echo 'KEYMAP=colemak' > /etc/vconsole.conf
 
 # hostname
-echo 'XX-Arch' > /etc/hostname
+echo 'LT-Arch' > /etc/hostname
 
 # 用户配置
 helix /etc/sudoers
@@ -61,11 +61,11 @@ passwd root
 passwd hong
 
 # bootloader配置
-echo 'title Archlinux' >> /boot/loader/entries/arch.conf
+echo 'title LT-Arch' >> /boot/loader/entries/arch.conf
 echo 'linux /vmlinuz-linux-zen' >> /boot/loader/entries/arch.conf
 echo 'initrd /initramfs-linux-zen.img' >> /boot/loader/entries/arch.conf
 echo 'initrd /amd-ucode.img' >> /boot/loader/entries/arch.conf
-echo 'options root=UUID=a684d56a-0e31-4fd1-be6a-278e59507dfe rw psi=1' >> /boot/loader/entries/arch.conf
+echo 'options root=UUID=5bb19d29-9725-4336-bb54-8a251dbb944b rw psi=1' >> /boot/loader/entries/arch.conf
 echo 'default arch.conf' >> /boot/loader/loader.conf
 echo 'timeout 1' >> /boot/loader/loader.conf
 echo 'editor no' >> /boot/loader/loader.conf
